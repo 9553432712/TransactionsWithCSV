@@ -37,5 +37,12 @@ public class Balance {
     public String toString() {
     	return ACCOUNT_NAME+"\t"+ACCOUNT_NO+"\t"+BALANCE;
     }
+    @Override
+    public boolean equals(Object o) {
+    	Balance b=(Balance) o;
+    	if(this.ACCOUNT_NAME.equals(b.ACCOUNT_NAME) && this.ACCOUNT_NO==b.ACCOUNT_NO && this.BALANCE==b.BALANCE)
+    		return true;
+    	return false;
+    }
 
 }
